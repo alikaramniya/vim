@@ -248,7 +248,8 @@ nnoremap <NL> i<CR><ESC>
 
 " Close all buffer without latest buffer
 command BufOnly silent! execute "%bd|e#|bd#"
-map <C-k><c-w> b :BufOnly<cr>
+" map <C-k><c-w> b :BufOnly<cr>
+noremap <C-w>k :BufOnly<CR>
 " Select all word
 let g:multi_cursor_select_all_word_key = '<C-a>'
 
@@ -343,5 +344,5 @@ Plug 'nn1ks/vim-darkspace'
 Plug 'morhetz/gruvbox'
 call plug#end()
 
-colorscheme dracula 
+colorscheme material 
 " colorscheme fogbell_lite 

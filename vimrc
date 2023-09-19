@@ -344,5 +344,4 @@ Plug 'nn1ks/vim-darkspace'
 Plug 'morhetz/gruvbox'
 call plug#end()
 
-colorscheme material 
-" colorscheme fogbell_lite 
+colorscheme material

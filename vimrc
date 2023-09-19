@@ -344,4 +344,4 @@ Plug 'nn1ks/vim-darkspace'
 Plug 'morhetz/gruvbox'
 call plug#end()
 
-colorscheme gruvbox 
+colorscheme NeoSolarized

@@ -248,8 +248,8 @@ nnoremap <NL> i<CR><ESC>
 
 " Close all buffer without latest buffer
 command BufOnly silent! execute "%bd|e#|bd#"
-" map <C-w>k b :BufOnly<cr>
-noremap <C-w>k :BufOnly<CR>
+" map <C-k>w b :BufOnly<cr>
+noremap <C-k>w :BufOnly<CR>
 " Select all word
 let g:multi_cursor_select_all_word_key = '<C-a>'
 

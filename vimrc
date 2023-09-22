@@ -314,7 +314,12 @@ xmap <leader>x  <Plug>(coc-convert-snippet)
 """     au ColorScheme * :hi! CursorLine gui=underline cterm=underline
 """ augroup END
 
-let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail' " tag style config
+let g:airline#extensions#tabline#enabled = 1 " enable tab for airline plugin
+let g:airline_powerline_fonts = 1 " enable font in airline plugin
+
+nnoremap <silent> gb :bn<CR>
+nnoremap <silent> gB :bp<CR>
 
 " Plugins
 call plug#begin('~/.vim/plugged')

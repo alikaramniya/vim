@@ -1,0 +1,9 @@
+برای کانفیگ کردن یک ایرلاین خوب اول از همه از طریق دو کامند زیر اون رو داخل .vimrc نصب کنید
+
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+بعد از نصب کردن اون با کامند :PlugInstall 
+الان برین و فونت powrline_fonts رو نصب کنید و بعد داخل فایل .vimrc کامند زیر رو اضافه کنید تا فونت اعمال بشه
+
+let g:airline_powerline_fonts = 1

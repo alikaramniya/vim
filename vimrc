@@ -216,13 +216,14 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
+" Download coc-laravel package from https://github.com/yaegassy/coc-laravel
 let g:coc_global_extensions = [
     \ 'coc-tsserver',
     \ 'coc-json',
     \ 'coc-html',
     \ 'coc-css',
     \ 'coc-blade',
-    \ '@yaegassy/coc-laravel',  " download from -> https://github.com/yaegassy/coc-laravel
+    \ '@yaegassy/coc-laravel',
     \ 'coc-snippets',
     \ 'coc-prettier',
     \ 'coc-emmet',

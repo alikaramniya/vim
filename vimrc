@@ -5,7 +5,7 @@ let mapleader = ","
 syntax enable
 
 set nocompatible
-set number                " Show numbers on the left
+""" set number                " Show numbers on the left
 set hlsearch              " Highlight search results
 set ignorecase            " Search ingnoring case
 set smartcase             " Do not ignore case if the search patter has uppercase
@@ -222,12 +222,13 @@ let g:coc_global_extensions = [
     \ 'coc-html',
     \ 'coc-css',
     \ 'coc-blade',
+    \ '@yaegassy/coc-laravel',  " download from -> https://github.com/yaegassy/coc-laravel
     \ 'coc-snippets',
     \ 'coc-prettier',
     \ 'coc-emmet',
     \ 'coc-phpls',
     \ 'coc-python',
-	\ 'coc-diagnostic'
+    \ 'coc-diagnostic'
     \]
 
 " Coc Config end
@@ -353,4 +354,5 @@ Plug 'nn1ks/vim-darkspace'
 Plug 'morhetz/gruvbox'
 Plug 'Jorengarenar/vim-darkness'
 call plug#end()
+
 colorscheme dracula 

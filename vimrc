@@ -216,7 +216,7 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
-" Download coc-laravel package from https://github.com/yaegassy/coc-laravel
+" Download @yaegassy/coc-laravel package coc from https://github.com/yaegassy/coc-laravel
 let g:coc_global_extensions = [
     \ 'coc-tsserver',
     \ 'coc-json',
@@ -226,6 +226,8 @@ let g:coc_global_extensions = [
     \ '@yaegassy/coc-laravel',
     \ 'coc-snippets',
     \ 'coc-prettier',
+    \ 'coc-tailwindcss',
+    \ '@yaegassy/coc-tailwindcss3',
     \ 'coc-emmet',
     \ 'coc-phpls',
     \ 'coc-python',
@@ -309,19 +311,29 @@ imap <C-j> <Plug>(coc-snippets-expand-jump)
 xmap <leader>x  <Plug>(coc-convert-snippet)
 
 " Set under line for curren cursor
-""" set cursorline
-""" augroup CustomCursorLine
-"""     au!
-"""     au ColorScheme * :hi clear CursorLine
-"""     au ColorScheme * :hi! CursorLine gui=underline cterm=underline
-""" augroup END
+"""set cursorline
+"""augroup CustomCursorLine
+"""    au!
+"""    au ColorScheme * :hi clear CursorLine
+"""    au ColorScheme * :hi! CursorLine gui=underline cterm=underline
+"""augroup END
 
+" Airline Config
 let g:airline#extensions#tabline#formatter = 'unique_tail' " tag style config
 let g:airline#extensions#tabline#enabled = 1 " enable tab for airline plugin
 let g:airline_powerline_fonts = 1 " enable font in airline plugin
 
+" Move between buffer with shortcut
 nnoremap <silent> gb :bn<CR>
 nnoremap <silent> gB :bp<CR>
+
+" Tokyonight theme config
+let g:tokyonight_style = 'night' " available: night, storm
+let g:tokyonight_enable_italic = 1
+
+" Config folding for php
+map <F4> <Esc>:DisablePHPFolds<Cr>
+map <F5> <Esc>:EnableFastPHPFolds<Cr>
 
 " Plugins
 call plug#begin('~/.vim/plugged')
@@ -354,6 +366,9 @@ Plug 'rafi/awesome-vim-colorschemes'
 Plug 'nn1ks/vim-darkspace'
 Plug 'morhetz/gruvbox'
 Plug 'Jorengarenar/vim-darkness'
+Plug 'joshdick/onedark.vim'
+Plug 'ghifarit53/tokyonight-vim'
+Plug 'endel/vim-github-colorscheme'
 call plug#end()
 
-colorscheme dracula 
+colorscheme tokyonight 

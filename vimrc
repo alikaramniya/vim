@@ -311,16 +311,15 @@ imap <C-j> <Plug>(coc-snippets-expand-jump)
 xmap <leader>x  <Plug>(coc-convert-snippet)
 
 " Set under line for curren cursor
-"""set cursorline
-"""augroup CustomCursorLine
-"""    au!
-"""    au ColorScheme * :hi clear CursorLine
-"""    au ColorScheme * :hi! CursorLine gui=underline cterm=underline
-"""augroup END
+set cursorline
+augroup CustomCursorLine
+    au!
+    au ColorScheme * :hi clear CursorLine
+    au ColorScheme * :hi! CursorLine gui=underline cterm=underline
+augroup END
 
 " Airline Config
 let g:airline#extensions#tabline#formatter = 'unique_tail' " tag style config
-let g:airline#extensions#tabline#enabled = 1 " enable tab for airline plugin
 let g:airline_powerline_fonts = 1 " enable font in airline plugin
 
 " Move between buffer with shortcut
@@ -352,6 +351,12 @@ Plug 'majutsushi/tagbar' " Tag bar plug
 Plug 'andrewradev/tagalong.vim' " Auto rename tag
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes' " airline theme
+" Start laravel plug
+Plug 'tpope/vim-dispatch'             "| Optional
+Plug 'tpope/vim-projectionist'        "|
+Plug 'noahfrederick/vim-composer'     "|
+Plug 'noahfrederick/vim-laravel'
+" End laravel plug
 Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-fugitive' " work with git
 Plug 'tpope/vim-surround' " Working with tags

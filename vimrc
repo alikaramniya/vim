@@ -339,6 +339,10 @@ map <F5> <Esc>:EnableFastPHPFolds<Cr>
 " Remove everything in statusline 
 let &statusline='%#Normal#'
 
+" Remove ~ icon from first of line and replace them with space
+""" set fillchars+=eob:~  <-- by default
+set fillchars+=eob: 
+
 " Plugins
 call plug#begin('~/.vim/plugged')
 " Plugins here !!!!
@@ -379,4 +383,6 @@ Plug 'ghifarit53/tokyonight-vim'
 
 call plug#end()
 
-colorscheme tokyonight 
+
+
+colorscheme material 

@@ -336,8 +336,8 @@ let g:tokyonight_enable_italic = 1
 map <F4> <Esc>:DisablePHPFolds<Cr>
 map <F5> <Esc>:EnableFastPHPFolds<Cr>
 
-" Disable status line
-set laststatus=0
+" Remove everything in statusline 
+let &statusline='%#Normal#'
 
 " Plugins
 call plug#begin('~/.vim/plugged')

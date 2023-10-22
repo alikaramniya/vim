@@ -5,14 +5,14 @@ let mapleader = ","
 syntax enable
 
 set nocompatible
-""" set number                " Show numbers on the left
+""" set number relativenumber                " Show numbers on the left
 set hlsearch              " Highlight search results
 set ignorecase            " Search ingnoring case
 set smartcase             " Do not ignore case if the search patter has uppercase
 set noerrorbells          " I hate bells
 set belloff=esc
-set tabstop=4             " Tab size of 4 spaces
-set softtabstop=4         " On insert use 4 spaces for tab
+set tabstop=4             " Tab size of 2 spaces
+set softtabstop=4         " On insert use 2 spaces for tab
 set shiftwidth=4
 set expandtab             " Use apropiate number of spaces
 set nowrap                " Wrapping sucks (except on markdown)
@@ -224,6 +224,7 @@ let g:coc_global_extensions = [
     \ 'coc-json',
     \ 'coc-html',
     \ 'coc-css',
+    \ 'coc-html-css-support',
     \ 'coc-blade',
     \ '@yaegassy/coc-laravel',
     \ 'coc-snippets',
@@ -239,7 +240,7 @@ let g:coc_global_extensions = [
 " Coc Config end
 
 "Cursor settings:
-let &t_SI.="\e[1 q" "SI = INSERT mode
+let &t_SI.="\e[5 q" "SI = INSERT mode
 let &t_SR.="\e[4 q" "SR = REPLACE mode
 let &t_EI.="\e[2 q" "EI = NORMAL mode (ELSE)
 "  1 -> blinking block
@@ -297,7 +298,8 @@ function! HorizontalScrollMode( call_char  )
       echohl None | echo '' | redraws
 endfunction
 
-let g:material_theme_style = 'default'
+""" let g:material_theme_style = 'default' | 'palenight' | 'ocean' | 'lighter' | 'darker' | 'default-community' | 'palenight-community' | 'ocean-community' | 'lighter-community' | 'darker-community'
+let g:material_theme_style = 'ocean'
 
 " Use <C-l> for trigger snippet expand.
 imap <C-l> <Plug>(coc-snippets-expand)
@@ -333,15 +335,14 @@ let g:tokyonight_style = 'night' " available: night, storm
 let g:tokyonight_enable_italic = 1
 
 " Config folding for php
-map <F4> <Esc>:DisablePHPFolds<Cr>
+""" map <F4> <Esc>:DisablePHPFolds<Cr>
 map <F5> <Esc>:EnableFastPHPFolds<Cr>
 
 " Remove everything in statusline 
 let &statusline='%#Normal#'
 
 " Remove ~ icon from first of line and replace them with space
-""" set fillchars+=eob:~  <-- by default
-set fillchars+=eob: 
+set fillchars+=eob: 
 
 " Plugins
 call plug#begin('~/.vim/plugged')
@@ -383,6 +384,4 @@ Plug 'ghifarit53/tokyonight-vim'
 
 call plug#end()
 
-
-
-colorscheme material 
+colorscheme dracula 

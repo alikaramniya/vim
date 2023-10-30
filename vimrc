@@ -240,9 +240,9 @@ let g:coc_global_extensions = [
 " Coc Config end
 
 "Cursor settings:
-let &t_SI.="\e[5 q" "SI = INSERT mode
+let &t_SI.="\e[2 q" "SI = INSERT mode
 let &t_SR.="\e[4 q" "SR = REPLACE mode
-let &t_EI.="\e[2 q" "EI = NORMAL mode (ELSE)
+let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
 "  1 -> blinking block
 "  2 -> solid block
 "  3 -> blinking underscore
@@ -257,6 +257,7 @@ nnoremap <NL> i<CR><ESC>
 command BufOnly silent! execute "%bd|e#|bd#"
 " map <C-k>w b :BufOnly<cr>
 noremap <C-k>w :BufOnly<CR>
+
 " Select all word
 let g:multi_cursor_select_all_word_key = '<C-a>'
 
@@ -299,7 +300,7 @@ function! HorizontalScrollMode( call_char  )
 endfunction
 
 """ let g:material_theme_style = 'default' | 'palenight' | 'ocean' | 'lighter' | 'darker' | 'default-community' | 'palenight-community' | 'ocean-community' | 'lighter-community' | 'darker-community'
-let g:material_theme_style = 'ocean'
+let g:material_theme_style = 'default'
 
 " Use <C-l> for trigger snippet expand.
 imap <C-l> <Plug>(coc-snippets-expand)
@@ -315,12 +316,12 @@ imap <C-j> <Plug>(coc-snippets-expand-jump)
 xmap <leader>x  <Plug>(coc-convert-snippet)
 
 " Set under line for curren cursor
-""" set cursorline
-""" augroup CustomCursorLine
-"""     au!
-"""     au ColorScheme * :hi clear CursorLine
-"""     au ColorScheme * :hi! CursorLine gui=underline cterm=underline
-""" augroup END
+set cursorline
+augroup CustomCursorLine
+    au!
+    au ColorScheme * :hi clear CursorLine
+    au ColorScheme * :hi! CursorLine gui=underline cterm=underline
+augroup END
 
 " Airline Config
 """ let g:airline#extensions#tabline#formatter = 'unique_tail' " tag style config
@@ -337,6 +338,9 @@ let g:tokyonight_enable_italic = 1
 " Config folding for php
 """ map <F4> <Esc>:DisablePHPFolds<Cr>
 map <F5> <Esc>:EnableFastPHPFolds<Cr>
+
+" Exit from search mode
+nnoremap <esc> :nohlsearch<return>
 
 " Remove everything in statusline 
 let &statusline='%#Normal#'
@@ -375,13 +379,14 @@ Plug 'ryanoasis/vim-devicons' " Icon for file in vim
 Plug 'gko/vim-coloresque' " Color plugin for vim
 Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'tribela/vim-transparent'
 Plug 'icymind/neosolarized'
 Plug 'nn1ks/vim-darkspace'
+Plug 'tribela/vim-transparent'
 Plug 'morhetz/gruvbox'
 Plug 'joshdick/onedark.vim'
 Plug 'ghifarit53/tokyonight-vim'
+Plug 'cocopon/iceberg.vim'
 
 call plug#end()
 
-colorscheme dracula 
+colorscheme NeoSolarized 

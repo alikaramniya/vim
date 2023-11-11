@@ -272,6 +272,9 @@ map <C-T><C-T> :TagbarToggle <cr>
 
 let NERDTreeShowHidden=1
 
+" Support persian language
+set termbidi
+
 " maximize current split or return to previous
 noremap <C-w>m :MaximizerToggle<CR>
 

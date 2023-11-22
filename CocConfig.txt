@@ -1,5 +1,6 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": ["blade", "php", "react", "javascript", "typescript", "css", "less", "scss", "json", "graphql", "markdown", "vue", "svelte", "yaml", "html"],
+  //"coc.preferences.formatOnSaveFiletypes": ["blade", "php", "react", "javascript", "typescript", "css", "less", "scss", "json", "graphql", "markdown", "vue", "svelte", "yaml", "html"],
+  "coc.preferences.formatOnSave": true,
   "suggest.autoTrigger": "none",
   "diagnostic-languageserver.filetypes": {
     "php": ["phpcs"]

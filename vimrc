@@ -389,6 +389,7 @@ Plug 'morhetz/gruvbox'
 Plug 'joshdick/onedark.vim'
 Plug 'ghifarit53/tokyonight-vim'
 Plug 'cocopon/iceberg.vim'
+Plug 'KabbAmine/vCoolor.vim' " Work with color and set custom color when coding
 
 call plug#end()
 

@@ -54,7 +54,11 @@ map <C-k><C-k> :NERDTreeToggle<cr>
 " Use Ctrl-P to open the fuzzy file opener
 nnoremap <C-p> :Files<cr>
 
-" Coc Config start
+" Shortcut for get list active tabs by press lt
+nnoremap lt :W<CR>
+
+
+" ---------------------------------------------------- Coc Config start --------------------------------------------"
 
 
 " May need for Vim (not Neovim) since coc.nvim calculates byte offset by count
@@ -237,7 +241,7 @@ let g:coc_global_extensions = [
     \ 'coc-diagnostic'
     \]
 
-" Coc Config end
+" ---------------------------------------------- Coc Config end --------------------------------------------- "
 
 "Cursor settings:
 let &t_SI.="\e[2 q" "SI = INSERT mode
@@ -250,7 +254,7 @@ let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
 "  5 -> blinking vertical bar
 "  6 -> solid vertical bar
 
-" Shortcut for break line to new line
+" Shortcut for break line to new line by press ctrl+j
 nnoremap <NL> i<CR><ESC>
 
 " Close all buffer without latest buffer

@@ -1,5 +1,5 @@
 {
-  //"coc.preferences.formatOnSaveFiletypes": ["blade", "php", "react", "javascript", "typescript", "css", "less", "scss", "json", "graphql", "markdown", "vue", "svelte", "yaml", "html"],
+  "signature.target": "echo",
   "coc.preferences.formatOnSave": true,
   "suggest.autoTrigger": "none",
   "diagnostic-languageserver.filetypes": {

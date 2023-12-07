@@ -331,8 +331,7 @@ augroup CustomCursorLine
 augroup END
 
 " Airline Config
-""" let g:airline#extensions#tabline#formatter = 'unique_tail' " tag style config
-""" let g:airline_powerline_fonts = 1 " enable font in airline plugin
+let g:airline_theme='darkspace'
 
 " Move between buffer with shortcut
 nnoremap <silent> gb :bn<CR>
@@ -370,8 +369,8 @@ Plug 'terryma/vim-multiple-cursors' " Multi cursor work
 Plug 'jiangmiao/auto-pairs' " auto paris
 Plug 'majutsushi/tagbar' " Tag bar plug
 Plug 'andrewradev/tagalong.vim' " Auto rename tag
-""" Plug 'vim-airline/vim-airline'
-""" Plug 'vim-airline/vim-airline-themes' " airline theme
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-theme'
 " Start laravel plug
 Plug 'tpope/vim-dispatch'             "| Optional
 Plug 'tpope/vim-projectionist'        "|
@@ -397,4 +396,4 @@ Plug 'KabbAmine/vCoolor.vim' " Work with color and set custom color when coding
 
 call plug#end()
 
-colorscheme NeoSolarized 
+colorscheme darkspace 

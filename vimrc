@@ -235,6 +235,7 @@ let g:coc_global_extensions = [
     \ 'coc-prettier',
     \ 'coc-tailwindcss',
     \ '@yaegassy/coc-tailwindcss3',
+    \ '@yaegassy/coc-volar',
     \ 'coc-emmet',
     \ 'coc-phpls',
     \ 'coc-python',

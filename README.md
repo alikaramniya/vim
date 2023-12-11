@@ -42,7 +42,7 @@ vim
 [list extension for coc](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions#implemented-coc-extensions)
 
 
-### اگر میخواین که از کانفیگ من استفاده کنید محتویات فایل CocConfig.txt رو کپی کنید و بعد توی vim برین تو تنظیمات coc با اجرا دستور CocConfig: او اونجا قرار بدید
+### اگر میخواین که از کانفیگ من استفاده کنید محتویات فایل CocConfig.txt رو کپی کنید و بعد توی vim برین تو تنظیمات coc با اجرا دستور CocConfig: و اونجا قرار بدید
 
 
 ### برای اپدیت کردن همه پلاگین ها PlugUpdate: و برای اپدیت کردن همه extension ها CocUpdate: رو بزنید 

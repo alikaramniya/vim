@@ -355,7 +355,10 @@ map <F5> <Esc>:EnableFastPHPFolds<Cr>
 nnoremap <esc> :nohlsearch<return>
 
 " Remove everything in statusline 
-let &statusline='%#Normal#'
+"""let &statusline='%#Normal#'
+
+" Status line config
+set statusline=\ %t\ %=%{%'%'.(line('$')->len()).'l'%}/%L\ 
 
 " Remove ~ icon from first of line and replace them with space
 set fillchars+=eob: 

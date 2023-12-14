@@ -390,6 +390,7 @@ Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-fugitive' " work with git
 Plug 'tpope/vim-surround' " Working with tags
 Plug 'honza/vim-snippets' " Vim Snippets
+Plug 'SirVer/ultisnips' " Create custom snippet
 Plug 'ryanoasis/vim-devicons' " Icon for file in vim
 Plug 'gko/vim-coloresque' " Color plugin for vim
 Plug 'kaicataldo/material.vim', { 'branch': 'main' }

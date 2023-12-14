@@ -57,6 +57,11 @@ nnoremap <C-p> :Files<cr>
 " Shortcut for get list active tabs by press lt
 nnoremap lt :W<CR>
 
+" Get list todo
+nnoremap td :Ag todo<CR>
+
+" Run VCoolor
+nnoremap vc :VCoolor<CR>
 
 " ---------------------------------------------------- Coc Config start --------------------------------------------"
 

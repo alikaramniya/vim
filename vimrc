@@ -360,7 +360,7 @@ map <F5> <Esc>:EnableFastPHPFolds<Cr>
 nnoremap <esc> :nohlsearch<return>
 
 " Copy text to clipboard by mouse
-set mouse:v
+set mouse=v
 
 " Remove everything in statusline 
 """let &statusline='%#Normal#'

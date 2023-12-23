@@ -248,6 +248,7 @@ let g:coc_global_extensions = [
     \ '@yaegassy/coc-volar',
     \ 'coc-emmet',
     \ 'coc-phpls',
+    \ 'coc-php-cs-fixer',
     \ 'coc-python',
     \ 'coc-diagnostic'
     \]

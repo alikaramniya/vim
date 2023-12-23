@@ -1,4 +1,8 @@
 {
+  "php-cs-fixer.activateTool": "pint" // config php-cs-fixer for config php file and format php file
+  // "[php]": {
+  //   "coc.preferences.formatOnSave": true
+  // },
   "signature.target": "echo",
   "coc.preferences.formatOnSave": true,
   "suggest.autoTrigger": "none",

@@ -56,6 +56,10 @@ vim
 
 #### اگر میخواین پلاگین رو پاک کنید اول توی vimrc. اون پلاگین رو پاک کنید بعد دستور % source: رو اجرا کنید بعد دستور PlugClean: و بعد y و enter کنید تا پاک شه برای پاک کردن extension هم کافیه دستور CocUninstall: و اون extension خاص رو اجرا کنید 
 
+### در اخر هم برای این که ایکون ها برای شما اعمال بشن شما فایلی که داخل پوشه icons هست رو کپی کنید توی مسیر پایین
+```
+cp -r icons/icons ~/.fonts
+```
 
 ### References
 [blog](https://marioyepes.com/vim-setup-for-modern-web-development/)

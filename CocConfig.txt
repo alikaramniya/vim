@@ -3,9 +3,9 @@
   // "[php]": {
   //   "coc.preferences.formatOnSave": true
   // },
-  "signature.target": "echo",
-  "coc.preferences.formatOnSave": true,
-  "suggest.autoTrigger": "none",
+  // "signature.target": "echo", // for disable pop up detail comment 
+  // "coc.preferences.formatOnSave": true, // format file after save them
+  "suggest.autoTrigger": "none", // disable autocomplete
   "diagnostic-languageserver.filetypes": {
     "php": ["phpcs"]
   },

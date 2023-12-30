@@ -1,6 +1,6 @@
 # کانفیگ کردن vim
 
-##[list-shortcuts](https://github.com/alikaramniya/vim/tree/master/list_shortcut)
+## [list-shortcuts](https://github.com/alikaramniya/vim/tree/master/list_shortcut)
 
 ### زمانی که در محیط vim قرار داریم برای کپی کردن بخشی از متن به طوری که بتونیم متن کپی شده رو توی محیط دیگه این هم paste کنیم با yankyank این مشگل ما حل نمیشه و برای این کار ما دو راه داریم راه اول بیایم زماین که ماوس رو میخوایم بکشیم روی متن دکمه shift رو هم نگه داریم و راه دوم اینه که قطعه کد پایین رو توی vimrc. قرار بدیم
 

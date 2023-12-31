@@ -367,7 +367,7 @@ set mouse=v
 """let &statusline='%#Normal#'
 
 " Status line config
-set statusline=\ %t\ %=%{%'%'.(line('$')->len()).'l'%}/%L
+set statusline=\ %t\ %=%{%'%'.(line('$')->len()).'l'%}/%L\ 
 
 " Remove ~ icon from first of line and replace them with space
 set fillchars+=eob: 

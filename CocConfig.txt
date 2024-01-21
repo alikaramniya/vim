@@ -1,10 +1,7 @@
 {
-  "php-cs-fixer.activateTool": "pint" // config php-cs-fixer for config php file and format php file
-  // "[php]": {
-  //   "coc.preferences.formatOnSave": true
-  // },
-  // "signature.target": "echo", // for disable pop up detail comment 
-  // "coc.preferences.formatOnSave": true, // format file after save them
+  "php-cs-fixer.activateTool": "pint", // config php-cs-fixer for config php file and format php file
+  "signature.target": "echo", // for disable pop up detail comment 
+  "coc.preferences.formatOnSave": true, // format file after save them
   "suggest.autoTrigger": "none", // disable autocomplete
   "diagnostic-languageserver.filetypes": {
     "php": ["phpcs"]

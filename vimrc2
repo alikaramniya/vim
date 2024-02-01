@@ -278,10 +278,10 @@ noremap <C-k>w :BufOnly<CR>
 let g:multi_cursor_select_all_word_key = '<C-a>'
 
 " Change current spit's width
-noremap <silent> <C-A-Left> :vertical resize -1<CR>
-noremap <silent> <C-A-Right> :vertical resize +1<CR>
-nnoremap <silent> <C-A-Up> :resize -1<CR>
-noremap <silent> <C-A-Down> :resize +1<CR>
+noremap <silent> <C-S-Left> :vertical resize -1<CR>
+noremap <silent> <C-S-Right> :vertical resize +1<CR>
+nnoremap <silent> <C-S-Up> :resize -1<CR>
+noremap <silent> <C-S-Down> :resize +1<CR>
 
 " toggle tagbar
 map <C-T><C-T> :TagbarToggle <cr>

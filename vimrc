@@ -247,8 +247,8 @@ let g:coc_global_extensions = [
     \ '@yaegassy/coc-tailwindcss3',
     \ '@yaegassy/coc-volar',
     \ 'coc-emmet',
-    \ 'coc-phpls',
     \ 'coc-php-cs-fixer',
+    \ 'coc-phpls',
     \ 'coc-python',
     \ 'coc-diagnostic'
     \]
@@ -271,17 +271,17 @@ nnoremap <NL> i<CR><ESC>
 
 " Close all buffer without latest buffer
 command BufOnly silent! execute "%bd|e#|bd#"
-" map <C-k>w b :BufOnly<cr>
-noremap <C-k>w :BufOnly<CR>
+" map <C-k>t b :BufOnly<cr>
+noremap <C-k>t :BufOnly<CR>
 
 " Select all word
 let g:multi_cursor_select_all_word_key = '<C-a>'
 
 " Change current spit's width
-noremap <silent> <C-S-Left> :vertical resize +1<CR>
-noremap <silent> <C-S-Right> :vertical resize -1<CR>
-nnoremap <silent> <C-S-Up> :resize +1<CR>
-noremap <silent> <C-S-Down> :resize -1<CR>
+noremap <silent> <C-S-Left> :vertical resize -1<CR>
+noremap <silent> <C-S-Right> :vertical resize +1<CR>
+nnoremap <silent> <C-S-Up> :resize -1<CR>
+noremap <silent> <C-S-Down> :resize +1<CR>
 
 " toggle tagbar
 map <C-T><C-T> :TagbarToggle <cr>
@@ -292,7 +292,7 @@ let NERDTreeShowHidden=1
 set termbidi
 
 " maximize current split or return to previous
-noremap <C-w>m :MaximizerToggle<CR>
+noremap <C-f>t :MaximizerToggle<CR>
 
 " Config NeoSolarized
 set termguicolors
@@ -320,6 +320,7 @@ endfunction
 
 """ let g:material_theme_style = 'default' | 'palenight' | 'ocean' | 'lighter' | 'darker' | 'default-community' | 'palenight-community' | 'ocean-community' | 'lighter-community' | 'darker-community'
 let g:material_theme_style = 'default'
+let g:material_terminal_italics = 1
 
 " Use <C-l> for trigger snippet expand.
 imap <C-l> <Plug>(coc-snippets-expand)
@@ -357,21 +358,53 @@ let g:tokyonight_enable_italic = 1
 """ map <F4> <Esc>:DisablePHPFolds<Cr>
 map <F5> <Esc>:EnableFastPHPFolds<Cr>
 
+set foldmethod=syntax "syntax highlighting items specify folds  
+set foldcolumn=1 "defines 1 col at window left, to indicate folding  
+let javaScript_fold=1 "activate folding by JS syntax  
+set foldlevelstart=0 "start file with all folds closed  -> 99 opned zero is closed
+" End config folding
+
 " Exit from search mode
 nnoremap <esc> :nohlsearch<return>
 
-" Copy text to clipboard by mouse
-set mouse=v
-
-" Remove everything in statusline 
-"""let &statusline='%#Normal#'
+" Remove everything in statusline
+let &statusline='%#Normal#'
 
 " Status line config
-set statusline=\ %t\ %=%{%'%'.(line('$')->len()).'l'%}/%L\ 
+""" set statusline=\ %t\ %=%{%'%'.(line('$')->len()).'l'%}/%L\ 
 
 " Remove ~ icon from first of line and replace them with space
 set fillchars+=eob: 
 
+" -------------------------------------- NeoSolarized config ---------------------------------
+
+" Default value is "normal", Setting this option to "high" or "low" does use the
+" same Solarized palette but simply shifts some values up or down in order to
+" expand or compress the tonal range displayed.
+let g:neosolarized_contrast = "normal"
+
+" Special characters such as trailing whitespace, tabs, newlines, when displayed
+" using ":set list" can be set to one of three levels depending on your needs.
+" Default value is "normal". Provide "high" and "low" options.
+let g:neosolarized_visibility = "normal"
+
+" I make vertSplitBar a transparent background color. If you like the origin
+" solarized vertSplitBar style more, set this value to 0.
+let g:neosolarized_vertSplitBgTrans = 1
+
+" If you wish to enable/disable NeoSolarized from displaying bold, underlined
+" or italicized" typefaces, simply assign 1 or 0 to the appropriate variable.
+" Default values:
+let g:neosolarized_bold = 1
+let g:neosolarized_underline = 1
+let g:neosolarized_italic = 1
+
+" Used to enable/disable "bold as bright" in Neovim terminal. If colors of bold
+" text output by commands like `ls` aren't what you expect, you might want to
+" try disabling this option. Default value:
+let g:neosolarized_termBoldAsBright = 1
+
+" -------------------------------------- NeoSolarized config ---------------------------------
 " Plugins
 call plug#begin('~/.vim/plugged')
 " Plugins here !!!!
@@ -387,8 +420,6 @@ Plug 'terryma/vim-multiple-cursors' " Multi cursor work
 Plug 'jiangmiao/auto-pairs' " auto paris
 Plug 'majutsushi/tagbar' " Tag bar plug
 Plug 'andrewradev/tagalong.vim' " Auto rename tag
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-theme'
 " Start laravel plug
 Plug 'tpope/vim-dispatch'             "| Optional
 Plug 'tpope/vim-projectionist'        "|
@@ -412,7 +443,12 @@ Plug 'joshdick/onedark.vim'
 Plug 'ghifarit53/tokyonight-vim'
 Plug 'cocopon/iceberg.vim'
 Plug 'KabbAmine/vCoolor.vim' " Work with color and set custom color when coding
-
+Plug 'adoy/vim-php-refactoring-toolbox'
+Plug 'GuiLra/vim'
+Plug 'sakibmoon/vim-colors-notepad-plus-plus'
+Plug 'bluz71/vim-moonfly-colors'
+Plug 'JAremko/alpine-vim'
+Plug 'ayu-theme/ayu-vim'
 call plug#end()
 
-colorscheme darkspace 
+colorscheme material 

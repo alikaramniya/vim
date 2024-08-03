@@ -285,6 +285,8 @@ noremap <silent> <C-S-Down> :resize +1<CR>
 
 " toggle tagbar
 map <C-T><C-T> :TagbarToggle <cr>
+" Set default width for tagbar
+let g:tagbar_width = winwidth(0) * 20/100
 
 let NERDTreeShowHidden=1
 
@@ -319,7 +321,7 @@ function! HorizontalScrollMode( call_char  )
 endfunction
 
 """ let g:material_theme_style = 'default' | 'palenight' | 'ocean' | 'lighter' | 'darker' | 'default-community' | 'palenight-community' | 'ocean-community' | 'lighter-community' | 'darker-community'
-let g:material_theme_style = 'default'
+let g:material_theme_style = 'default-community'
 let g:material_terminal_italics = 1
 
 " Use <C-l> for trigger snippet expand.
@@ -338,9 +340,9 @@ xmap <leader>x  <Plug>(coc-convert-snippet)
 " Set under line for curren cursor
 set cursorline
 augroup CustomCursorLine
-    au!
-    au ColorScheme * :hi clear CursorLine
-    au ColorScheme * :hi! CursorLine gui=underline cterm=underline
+   au!
+   au ColorScheme * :hi clear CursorLine
+   au ColorScheme * :hi! CursorLine gui=underline cterm=underline
 augroup END
 
 " Airline Config
@@ -351,17 +353,12 @@ nnoremap <silent> gb :bn<CR>
 nnoremap <silent> gB :bp<CR>
 
 " Tokyonight theme config
-let g:tokyonight_style = 'night' " available: night, storm
+let g:tokyonight_style = 'night' " available: night, storm, day
 let g:tokyonight_enable_italic = 1
 
 " Config folding for php
 """ map <F4> <Esc>:DisablePHPFolds<Cr>
 map <F5> <Esc>:EnableFastPHPFolds<Cr>
-
-set foldmethod=syntax "syntax highlighting items specify folds  
-set foldcolumn=1 "defines 1 col at window left, to indicate folding  
-let javaScript_fold=1 "activate folding by JS syntax  
-set foldlevelstart=0 "start file with all folds closed  -> 99 opned zero is closed
 " End config folding
 
 " Exit from search mode
@@ -371,13 +368,12 @@ nnoremap <esc> :nohlsearch<return>
 let &statusline='%#Normal#'
 
 " Status line config
-""" set statusline=\ %t\ %=%{%'%'.(line('$')->len()).'l'%}/%L\ 
+set statusline=\ %t\ %=%{%'%'.(line('$')->len()).'l'%}/%L\ 
 
 " Remove ~ icon from first of line and replace them with space
 set fillchars+=eob: 
 
 " -------------------------------------- NeoSolarized config ---------------------------------
-
 " Default value is "normal", Setting this option to "high" or "low" does use the
 " same Solarized palette but simply shifts some values up or down in order to
 " expand or compress the tonal range displayed.
@@ -397,7 +393,7 @@ let g:neosolarized_vertSplitBgTrans = 1
 " Default values:
 let g:neosolarized_bold = 1
 let g:neosolarized_underline = 1
-let g:neosolarized_italic = 1
+let g:neosolarized_italic = 0
 
 " Used to enable/disable "bold as bright" in Neovim terminal. If colors of bold
 " text output by commands like `ls` aren't what you expect, you might want to
@@ -410,6 +406,7 @@ call plug#begin('~/.vim/plugged')
 " Plugins here !!!!
 Plug 'tpope/vim-sensible'         " Sensible defaults
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } " File navigator
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }     " Install fuzzy finder binary
 Plug 'junegunn/fzf.vim'               " Enable fuzzy finder in Vim
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " Intelisense
@@ -449,6 +446,14 @@ Plug 'sakibmoon/vim-colors-notepad-plus-plus'
 Plug 'bluz71/vim-moonfly-colors'
 Plug 'JAremko/alpine-vim'
 Plug 'ayu-theme/ayu-vim'
+Plug 'scrooloose/syntastic'
+Plug 'techtuner/aura-neovim' "Vim-Plug
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'eihigh/vim-aomi-grayscale'
+Plug 'stefanvanburen/rams.vim' " best
+Plug 'meain/hima-vim'   " add the plugin
+Plug 'erizocosmico/vim-color-golang'
 call plug#end()
 
-colorscheme material 
+colorscheme material

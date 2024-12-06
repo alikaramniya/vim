@@ -1,3 +1,5 @@
+### کل کانفیگ رو بخون حتما
+
 # کانفیگ کردن vim
 
 ## [list-shortcuts](https://github.com/alikaramniya/vim/tree/master/list_shortcut)
@@ -63,7 +65,18 @@ vim
 cp -r icons ~/.fonts
 ```
 
+#### زمانی که تمام تنظیمات را انجام دادیم الان زمانی که میخواهیم با زبان پی اچ پی کار کنیم به ما خطا میده برای برخی از متدهاش مثل رند برای حل این مشگل توی تنظیمات کوک اخر لیست آرایه  مقدار رندوم را اضافه میکنیم
+
+```
+"intelephense.stubs": [
+  // another intelephense stubs
+  "random"
+]
+```
+
 ### References
 [blog](https://marioyepes.com/vim-setup-for-modern-web-development/)
 
 [vim-plug](https://github.com/junegunn/vim-plug)
+
+[solve-problem-rand-method-in-php](https://github.com/bmewburn/vscode-intelephense/issues/2376)

@@ -1,46 +1,149 @@
 {
-  "php-cs-fixer.activateTool": "pint", // config php-cs-fixer for config php file and format php file
-  "signature.target": "echo", // for disable pop up detail comment 
-  "coc.preferences.formatOnSave": true, // format file after save them
-  "suggest.autoTrigger": "none", // disable autocomplete
-  "diagnostic-languageserver.filetypes": {
-    "php": ["phpcs"]
-  },
-  "diagnostic-languageserver.linters": {
-    "phpcs": {
-      "command": "./vendor/bin/phpcs",
-      "debounce": 300,
-      "rootPatterns": ["composer.json", "composer.lock", "vendor", ".git"],
-      "args": ["--report=emacs", "-s", "-"],
-      "offsetLine": 0,
-      "offsetColumn": 0,
-      "sourceName": "phpcs",
-      "formatLines": 1,
-      "formatPattern": [
-        "^.*:(\\d+):(\\d+):\\s+(.*)\\s+-\\s+(.*)(\\r|\\n)*$",
-        {
-          "line": 1,
-          "column": 2,
-          "message": 4,
-          "security": 3
+    "php-cs-fixer.activateTool": "pint", // config php-cs-fixer for config php file and format php file
+    "signature.target": "echo", // for disable pop up detail comment
+    "coc.preferences.formatOnSave": true, // format file after save them
+    "coc.preferences.formatOnSaveFiletypes": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact"
+    ],
+    "tsserver.formatOnType": true,
+
+    // Start disable autocomplete
+    "suggest.autoTrigger": "none",
+    // "diagnostic.enable": false,
+    //"suggest.timeout": 1,
+    //"clangd.semanticHighlighting": true,
+    // End
+
+    // حل کردن مشگل نشناختن برخشی از متد های پی اچ پی مثل رند با اضافه کردن random  
+    // آخرین اندیس این لیست هست و اضافش کردم
+    "intelephense.stubs": [
+        "apache",
+        "bcmath",
+        "bz2",
+        "calendar",
+        "com_dotnet",
+        "Core",
+        "ctype",
+        "curl",
+        "date",
+        "dba",
+        "dom",
+        "enchant",
+        "exif",
+        "FFI",
+        "fileinfo",
+        "filter",
+        "fpm",
+        "ftp",
+        "gd",
+        "gettext",
+        "gmp",
+        "hash",
+        "iconv",
+        "imap",
+        "intl",
+        "json",
+        "ldap",
+        "libxml",
+        "mbstring",
+        "meta",
+        "mysqli",
+        "oci8",
+        "odbc",
+        "openssl",
+        "pcntl",
+        "pcre",
+        "PDO",
+        "pdo_ibm",
+        "pdo_mysql",
+        "pdo_pgsql",
+        "pdo_sqlite",
+        "pgsql",
+        "Phar",
+        "posix",
+        "pspell",
+        "readline",
+        "Reflection",
+        "session",
+        "shmop",
+        "SimpleXML",
+        "snmp",
+        "soap",
+        "sockets",
+        "sodium",
+        "SPL",
+        "sqlite3",
+        "standard",
+        "superglobals",
+        "sysvmsg",
+        "sysvsem",
+        "sysvshm",
+        "tidy",
+        "tokenizer",
+        "xml",
+        "xmlreader",
+        "xmlrpc",
+        "xmlwriter",
+        "xsl",
+        "Zend OPcache",
+        "zip",
+        "zlib",
+        "random"
+    ],
+
+    "prettier.tabWidth": 2,
+
+    "diagnostic-languageserver.filetypes": {
+        "php": ["phpcs"]
+    },
+    "diagnostic-languageserver.linters": {
+        "phpcs": {
+            "command": "./vendor/bin/phpcs",
+            "debounce": 300,
+            "rootPatterns": [
+                "composer.json",
+                "composer.lock",
+                "vendor",
+                ".git"
+            ],
+            "args": ["--report=emacs", "-s", "-"],
+            "offsetLine": 0,
+            "offsetColumn": 0,
+            "sourceName": "phpcs",
+            "formatLines": 1,
+            "formatPattern": [
+                "^.*:(\\d+):(\\d+):\\s+(.*)\\s+-\\s+(.*)(\\r|\\n)*$",
+                {
+                    "line": 1,
+                    "column": 2,
+                    "message": 4,
+                    "security": 3
+                }
+            ],
+            "securities": {
+                "error": "error",
+                "warning": "warning"
+            }
         }
-      ],
-      "securities": {
-        "error": "error",
-        "warning": "warning"
-      }
+    },
+    "diagnostic-languageserver.formatFiletypes": {
+        "php": "phpcbf"
+    },
+    "diagnostic-languageserver.formatters": {
+        "phpcbf": {
+            "command": "./vendor/bin/phpcbf",
+            "rootPatterns": [
+                "composer.json",
+                "composer.lock",
+                "vendor",
+                ".git"
+            ],
+            "args": ["%file"],
+            "isStdout": false,
+            "doesWriteToFile": true
+        }
     }
-  },
-  "diagnostic-languageserver.formatFiletypes": {
-    "php": "phpcbf"
-  },
-  "diagnostic-languageserver.formatters": {
-    "phpcbf": {
-      "command": "./vendor/bin/phpcbf",
-      "rootPatterns": ["composer.json", "composer.lock", "vendor", ".git"],
-      "args": ["%file"],
-      "isStdout": false,
-      "doesWriteToFile": true
-    }
-  }
 }
